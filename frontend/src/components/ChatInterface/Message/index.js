@@ -17,7 +17,7 @@ export default function Message({ body, username, timestamp, user, message }) {
     const formattedMinute = minute.toString().padStart(2, '0');
     const amPm = hour < 12 ? 'am' : 'pm';
 
-    return `${formattedHour}:${formattedMinute} ${amPm} - ${month}/${day}/${year}`;
+    return `${month}/${day}/${year} - ${formattedHour}:${formattedMinute} ${amPm}`;
   }
 
 
