@@ -43,8 +43,24 @@ function ChannelFormModal({ id, componentType, title }) {
     dispatch(getTeamChannelsThunk(currentTeamId));
   }, [currentTeamId]);
 
+  const validChannel = (channel) => {
+    const errors = {};
+    const { name, description, imageUrl } = channel;
+
+    if (name.length > 50) errors.name = "name must be less than 50 characters";
+    if (description.length > 255)
+      errors.description = "description must be less than 255 characters";
+    if (imageUrl.length > 500)
+      errors.imageUrlLength = "image url must be less than 500 characters";
+    if (imageUrl && !imageUrl.match(/.(jpg|jpeg|png)$/))
+      errors.validImgUrl = "image url must end in .jpg, .jpeg, or .png";
+
+    return Object.values(errors).length > 0 ? errors : true;
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setErrors({});
 
     const newChannel = {
       id,
@@ -54,6 +70,11 @@ function ChannelFormModal({ id, componentType, title }) {
       imageUrl,
       teamId: currentTeamId,
     };
+
+    if (validChannel(newChannel) !== true) {
+      setErrors({ ...validChannel(newChannel) });
+      return;
+    }
 
     let data;
     if (componentType === "create") {
