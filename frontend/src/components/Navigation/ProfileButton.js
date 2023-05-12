@@ -44,7 +44,7 @@ function ProfileButton({ user }) {
 
   return (
     <div className="profile-container">
-      <button className="profile-icon-button" onClick={openMenu}>
+      <button className="profile-icon-button clickable" onClick={openMenu}>
         <i className="fas fa-user-circle profile-icon" />
       </button>
       <div
@@ -57,7 +57,7 @@ function ProfileButton({ user }) {
           {user && (
             <>
               <div className="nav-user-name-wrapper">
-                <div>Hello, {user.firstName}</div>
+                <div>Hello, <span className="user-name">{user.first_name}</span></div>
                 <div className="nav-user-email">{user.email}</div>
               </div>
               <img className="nav-user-img" src={user.profile_image_url}></img>
@@ -88,7 +88,7 @@ function ProfileButton({ user }) {
           )}
           {demoUserIds.includes(user.id) && (
             <>
-              <p className="error-p">Demo User Cannot be Edited/Deleted</p>
+              <p className="demo-error-message">*This demo user can't be edited/deleted</p>
               <button onClick={handleLogout}>Log Out</button>
             </>
           )}

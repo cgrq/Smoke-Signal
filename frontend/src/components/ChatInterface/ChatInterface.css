@@ -13,7 +13,7 @@
     background-color: rgb(42, 42, 42);
     justify-content: flex-start;
     border-radius: 20px !important;
-    overflow: hidden !important;
+    /* overflow: hidden !important; */
 }
 .chat-interface-main-wrapper ul li{
     list-style: none;
