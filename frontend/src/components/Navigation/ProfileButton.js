@@ -6,11 +6,11 @@ import UserFormModal from "../UserFormModal";
 import DeleteUserModal from "../DeleteUserModal";
 import "./Navigation.css";
 
-
 function ProfileButton({ user }) {
   const dispatch = useDispatch();
   const [showMenu, setShowMenu] = useState(false);
   const ulRef = useRef();
+  const demoUserIds = [1, 3];
 
   const openMenu = () => {
     // console.log("profile button push -----------> ", showMenu)
@@ -32,7 +32,9 @@ function ProfileButton({ user }) {
     return () => document.removeEventListener("click", closeMenu);
   }, [showMenu]);
 
-  const closeMenu = () => {setShowMenu(false)};
+  const closeMenu = () => {
+    setShowMenu(false);
+  };
 
   const handleLogout = (e) => {
     e.preventDefault();
@@ -45,42 +47,51 @@ function ProfileButton({ user }) {
       <button className="profile-icon-button" onClick={openMenu}>
         <i className="fas fa-user-circle profile-icon" />
       </button>
-      <div className={`${"profile-dropdown" + (showMenu ? "" : " hidden")} profile-list`} ref={ulRef}>
+      <div
+        className={`${
+          "profile-dropdown" + (showMenu ? "" : " hidden")
+        } profile-list`}
+        ref={ulRef}
+      >
         <div className={user ? "nav-upper-container" : "hidden"}>
-          {
-            user
-            && (
-              <>
+          {user && (
+            <>
               <div className="nav-user-name-wrapper">
                 <div>Hello, {user.firstName}</div>
                 <div className="nav-user-email">{user.email}</div>
-
               </div>
-                <img className="nav-user-img" src={user.profile_image_url}></img>
-              </>
-            )
-          }
+              <img className="nav-user-img" src={user.profile_image_url}></img>
+            </>
+          )}
         </div>
-        <div className={`nav-lower-container nav-links ${!user ? `nav-lower-container-logged-out` : ""}`}>
-          {
-            user && (
-              <div>
-                <OpenModalButton
-                  fillBackground={false}
-                  buttonText="Edit"
-                  onButtonClick={closeMenu}
-                  modalComponent={<UserFormModal componentType={"update"} />}
-                />
-                <OpenModalButton
-                  fillBackground={false}
-                  buttonText="Delete"
-                  onButtonClick={closeMenu}
-                  modalComponent={<DeleteUserModal />}
-                />
-                <button onClick={handleLogout}>Log Out</button>
-              </div>
-            )
-          }
+        <div
+          className={`nav-lower-container nav-links ${
+            !user ? `nav-lower-container-logged-out` : ""
+          }`}
+        >
+          {user && !demoUserIds.includes(user.id) && (
+            <div>
+              <OpenModalButton
+                fillBackground={false}
+                buttonText="Edit"
+                onButtonClick={closeMenu}
+                modalComponent={<UserFormModal componentType={"update"} />}
+              />
+              <OpenModalButton
+                fillBackground={false}
+                buttonText="Delete"
+                onButtonClick={closeMenu}
+                modalComponent={<DeleteUserModal />}
+              />
+              <button onClick={handleLogout}>Log Out</button>
+            </div>
+          )}
+          {demoUserIds.includes(user.id) && (
+            <>
+              <p className="error-p">Demo User Cannot be Edited/Deleted</p>
+              <button onClick={handleLogout}>Log Out</button>
+            </>
+          )}
         </div>
       </div>
     </div>

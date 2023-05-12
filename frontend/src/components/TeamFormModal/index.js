@@ -10,7 +10,7 @@ import {
 } from "../../store/teams";
 import InputField from "../InputField";
 import OpenDeleteModalButton from "../OpenDeleteModalButton";
-import DeleteTeamModal from "../DeleteTeamModal"
+import DeleteTeamModal from "../DeleteTeamModal";
 import Button from "../Button";
 import ErrorHandler from "../ErrorHandler";
 import "./TeamFormModal.css";
@@ -23,6 +23,8 @@ function TeamFormModal({ type, title }) {
   const [imageUrl, setImageUrl] = useState("");
   const [errors, setErrors] = useState([]);
   const { closeModal } = useModal();
+
+  const isGeneral = currentTeam.name === "General";
 
   useEffect(() => {
     if (type === "update" && currentTeam) {
@@ -59,20 +61,25 @@ function TeamFormModal({ type, title }) {
   return (
     <>
       <h1 className="team-form-modal-h1">{title}</h1>
-      <form className="team-form-modal-form" onSubmit={(e) => handleSubmit(e)}>
-        {Object.values(errors).length > 0 && (
+      {isGeneral && type !== "create" && (
+        <p className="error-p">Cannot Edit/Delete General Channel</p>
+      )}
+      {(!isGeneral || type === "create") && (
+        <form
+          className="team-form-modal-form"
+          onSubmit={(e) => handleSubmit(e)}
+        >
           <ErrorHandler errors={errors} />
-        )}
 
-        <InputField
-          label="Name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          placeholder="Team name"
-          required={true}
-        />
+          <InputField
+            label="Name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            placeholder="Team name"
+            required={true}
+          />
 
-        {/* <InputField
+          {/* <InputField
           label="Team Image"
           value={imageUrl}
           onChange={(e) => setImageUrl(e.target.value)}
@@ -80,20 +87,17 @@ function TeamFormModal({ type, title }) {
           required={false}
         /> */}
 
-        <button className="login-modal-button" type="submit">{type === 'create' ? 'Create ' : 'Update '}Team</button>
-
-      </form>
-      {
-        type === "update" && (
-          <OpenDeleteModalButton
-            buttonText="Delete"
-            modalComponent={
-              <DeleteTeamModal
-              />
-            }
-          />
-        )
-      }
+          <button className="login-modal-button" type="submit">
+            {type === "create" ? "Create " : "Update "}Team
+          </button>
+        </form>
+      )}
+      {type === "update" && !isGeneral && (
+        <OpenDeleteModalButton
+          buttonText="Delete"
+          modalComponent={<DeleteTeamModal />}
+        />
+      )}
     </>
   );
 }
