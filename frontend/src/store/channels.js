@@ -70,10 +70,6 @@ export const getUserChannelsThunk = () => async (dispatch) => {
 
   if (response.ok) {
     const { channels } = await response.json();
-    console.log(
-      `🖥 ~ file: channels.js:68 ~ getUserChannelsThunk ~ channels:`,
-      channels
-    );
     dispatch(getUserChannels(channels));
 
     return channels;

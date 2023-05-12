@@ -66,7 +66,6 @@ export const getCurrentTeamThunk = (id) => async (dispatch) => {
 
 // Get teams that users belong to by user id
 export const getUserTeamsThunk = (id) => async (dispatch) => {
-    console.log(`🖥 ~ file: teams.js:69 ~ getUserTeamsThunk ~ id:`, id)
     const response = await fetch(`/api/users/${id}/teams`);
     if (response.ok) {
         const teams = await response.json();

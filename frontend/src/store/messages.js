@@ -92,7 +92,6 @@ export const editMessageThunk = (message) => async (dispatch) => {
 
   if (response.ok) {
     const { message } = await response.json();
-    console.log("DISPATCHING EDIT MESSAGE");
     dispatch(editMessage(message));
 
     return null;

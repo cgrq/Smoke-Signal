@@ -26,7 +26,6 @@ def on_connect():
 @login_required
 def on_join(channel_id):
     join_room(f"Channel {channel_id}")
-    print(f"\nROOM NUMBER {channel_id}\n")
 
     socketio.emit("message", channel_id,
                   room=f"{channel_id}")
@@ -35,5 +34,4 @@ def on_join(channel_id):
 @socketio.on('message sent')
 @login_required
 def message_sent(data):
-    print("\nMESSAGE RECEIVED ON BACKEND\n", data)
     socketio.emit("message received", data, room=f"Channel {data['room']}")

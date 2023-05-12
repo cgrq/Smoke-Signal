@@ -94,22 +94,16 @@ def edit():
     """
     Edits an existing user's information
     """
-    print("HITTING EDIT ROUTE ~~~~~~")
     form = EditUserForm()
-    print("FORM", form)
     form['csrf_token'].data = request.cookies['csrf_token']
-    print("FORM TOKEN", form['csrf_token'].data)
     if form.validate_on_submit():
-        print("VALIDATE")
         user = User.query.get(current_user.id)
-        print("USER ~!!!!!!~")
-        print(user.to_dict())
 
         user.username = form.data['username']
         user.email = form.data['email']
         user.password = form.data['password']
-        user.firstName = form.data['firstName']
-        user.lastName = form.data['lastName']
+        user.first_name = form.data['firstName']
+        user.last_name = form.data['lastName']
         user.profile_image_url = form.data['profileImageUrl']
 
         db.session.commit()
