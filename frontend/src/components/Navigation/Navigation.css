@@ -15,7 +15,15 @@
 }
 .profile-dropdown li, .profile-dropdown a{
   color:black !important;
+}
 
+.demo-error-message {
+  color: rgb(254, 97, 97);
+  font-size: 14px;
+  width: 150%;
+  margin-left: -50px;
+  margin-top: -10px;
+  margin-bottom: 10px;
 }
 
 .hidden{
@@ -86,7 +94,13 @@
 
 .nav-user-email{
   font-size: 13px;
+  margin-top: 5px;
 }
+
+.user-name {
+  margin-left: 5px;
+}
+
 .nav-user-img{
   width:40px;
   height:40px;
