@@ -39,6 +39,12 @@ function TeamFormModal({ type, title }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setErrors({});
+
+    if (name.length > 50) {
+      setErrors({ ...errors, name: "name bust be less than 50 characters" });
+      return;
+    }
 
     let data;
     if (type === "create") {
@@ -62,7 +68,7 @@ function TeamFormModal({ type, title }) {
     <>
       <h1 className="team-form-modal-h1">{title}</h1>
       {isGeneral && type !== "create" && (
-        <p className="error-p">Cannot Edit/Delete General Channel</p>
+        <p className="error-p">Cannot Update/Delete General Team</p>
       )}
       {(!isGeneral || type === "create") && (
         <form

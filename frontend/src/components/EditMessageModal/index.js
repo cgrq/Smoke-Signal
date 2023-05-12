@@ -52,6 +52,7 @@ const EditMessageModal = ({ message }) => {
       <h1 className="edit-message-modal-h1">Edit Message</h1>
       <form onSubmit={handleSubmit} className="edit-message-modal-form">
         <ErrorHandler errors={errors} />
+
         <InputField
           value={newMessage}
           onChange={(e) => setNewMessage(e.target.value)}

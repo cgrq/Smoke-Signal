@@ -24,6 +24,9 @@ function ChannelFormModal({ id, componentType, title }) {
   const [errors, setErrors] = useState([]);
   const { closeModal } = useModal();
 
+  const isGeneralChannel =
+    componentType === "update" && name === "General Test Channel";
+
   useEffect(() => {
     if (componentType === "update" && teamChannels) {
       const channel = teamChannels[id];
@@ -40,8 +43,24 @@ function ChannelFormModal({ id, componentType, title }) {
     dispatch(getTeamChannelsThunk(currentTeamId));
   }, [currentTeamId]);
 
+  const validChannel = (channel) => {
+    const errors = {};
+    const { name, description, imageUrl } = channel;
+
+    if (name.length > 50) errors.name = "name must be less than 50 characters";
+    if (description.length > 255)
+      errors.description = "description must be less than 255 characters";
+    if (imageUrl.length > 500)
+      errors.imageUrlLength = "image url must be less than 500 characters";
+    if (imageUrl && !imageUrl.match(/.(jpg|jpeg|png)$/))
+      errors.validImgUrl = "image url must end in .jpg, .jpeg, or .png";
+
+    return Object.values(errors).length > 0 ? errors : true;
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setErrors({});
 
     const newChannel = {
       id,
@@ -51,6 +70,11 @@ function ChannelFormModal({ id, componentType, title }) {
       imageUrl,
       teamId: currentTeamId,
     };
+
+    if (validChannel(newChannel) !== true) {
+      setErrors({ ...validChannel(newChannel) });
+      return;
+    }
 
     let data;
     if (componentType === "create") {
@@ -67,11 +91,22 @@ function ChannelFormModal({ id, componentType, title }) {
     }
   };
 
+  if (isGeneralChannel)
+    return (
+      <>
+        <h1 className="channel-form-modal-h1">{title}</h1>
+        <p className="error-p">Cannot Update/Delete General Channel</p>
+      </>
+    );
+
   return (
     <>
       <h1 className="channel-form-modal-h1">{title}</h1>
-      <form className="channel-form-modal-form"  onSubmit={(e) => handleSubmit(e)}>
-        {Object.values(errors).length > 0 && <ErrorHandler errors={errors} />}
+      <form
+        className="channel-form-modal-form"
+        onSubmit={(e) => handleSubmit(e)}
+      >
+        <ErrorHandler errors={errors} />
 
         <InputField
           label="Name"
@@ -101,18 +136,12 @@ function ChannelFormModal({ id, componentType, title }) {
           {componentType === "create" ? "Create " : "Update "}Channel
         </button>
       </form>
-      {
-        componentType === "update" && (
-          <OpenDeleteModalButton
-            buttonText="Delete"
-            modalComponent={
-              <DeleteChannelModal
-                id={id}
-              />
-            }
-          />
-        )
-      }
+      {componentType === "update" && (
+        <OpenDeleteModalButton
+          buttonText="Delete"
+          modalComponent={<DeleteChannelModal id={id} />}
+        />
+      )}
     </>
   );
 }
