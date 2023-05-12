@@ -1,0 +1,16 @@
+.smoke-signal-wrapper-splash {
+    position: relative;
+    width:20px;
+    height:20px;
+    top: 120px;
+    left: 250px;
+    /* border: 2px solid pink; */
+}
+
+.smoke-signal-splash {
+    position: absolute;
+    /* border: 2px solid yellow; */
+    width: 560px;
+    left:-20px;
+    top:-120px;
+}
