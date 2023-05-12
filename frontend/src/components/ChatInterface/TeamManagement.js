@@ -27,9 +27,8 @@ function TeamManagement() {
     if (data) {
       setErrors(data);
     } else {
-      // dispatch(getUserTeamsThunk(sessionUserId));
+      dispatch(getUserTeamsThunk(sessionUserId));
       dispatch(getTeamChannelsThunk(currentTeamId));
-      dispatch(getUserTeamsThunk());
     }
   };
 
