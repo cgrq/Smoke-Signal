@@ -6,8 +6,8 @@ from flask_socketio import SocketIO, join_room
 # Set cors policy
 if os.environ.get("FLASK_ENV") == "production":
     origins = [
-        "http://smoke-signal.onrender.com",
-        "https://smoke-signal.onrender.com",
+        "https://smoke-signal-new.onrender.com",
+        "https://smoke-signal-new.onrender.com",
     ]
 else:
     origins = "*"
