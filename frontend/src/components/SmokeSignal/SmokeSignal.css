@@ -1,0 +1,13 @@
+.smoke-signal-wrapper{
+    position: relative;
+    width:20px;
+    height:20px;
+    z-index: 10000;
+}
+
+.smoke-signal{
+    position: absolute;
+    width: 360px;
+    left:-30px;
+    top:-120px;
+}

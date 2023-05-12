@@ -1,0 +1,9 @@
+.open-modal-button{
+    color:rgb(215, 215, 215);
+    border:2px solid transparent;
+    border-radius: 16px;
+    margin:2px 0;
+    width:100px;
+    padding:4px 12px;
+    background-color: rgb(255, 255, 255);
+}

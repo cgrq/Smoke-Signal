@@ -1,0 +1,12 @@
+.chat-interface-top-nav{
+    display:flex;
+    justify-content: space-between;
+    padding:10px;
+}
+.chat-interface-top-nav input{
+    background-color: rgb(94, 94, 94);
+    color:white;
+    padding:5px 10px;
+    border-radius: 10px;
+    width:400px;
+}

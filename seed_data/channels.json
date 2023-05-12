@@ -1,0 +1,212 @@
+[
+  {
+    "name": "Schmitt, Kutch and Purdy",
+    "description": "ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae mauris viverra diam vitae quam",
+    "type": "channel",
+    "image_url": "http://dummyimage.com/448x258.png/5fa2dd/ffffff",
+    "team_id": 3
+  },
+  {
+    "name": "Hansen, Legros and Quitzon",
+    "description": "id nisl venenatis lacinia aenean sit amet justo morbi ut odio cras mi pede malesuada in imperdiet",
+    "type": "dm",
+    "image_url": "http://dummyimage.com/261x549.png/cc0000/ffffff",
+    "team_id": 1
+  },
+  {
+    "name": "Reilly-Langosh",
+    "description": "fermentum donec ut mauris eget massa tempor convallis nulla neque libero convallis eget eleifend luctus ultricies eu nibh quisque id justo sit amet sapien dignissim vestibulum vestibulum",
+    "type": "dm",
+    "image_url": "http://dummyimage.com/268x704.png/dddddd/000000",
+    "team_id": 3
+  },
+  {
+    "name": "Nolan, Reynolds and Hand",
+    "description": "enim lorem ipsum dolor sit amet consectetuer adipiscing elit proin interdum mauris non ligula pellentesque ultrices phasellus id sapien in sapien iaculis congue",
+    "type": "channel",
+    "image_url": "http://dummyimage.com/830x753.png/5fa2dd/ffffff",
+    "team_id": 1
+  },
+  {
+    "name": "Buckridge Group",
+    "description": "tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer",
+    "type": "dm",
+    "image_url": "http://dummyimage.com/783x953.png/5fa2dd/ffffff",
+    "team_id": 2
+  },
+  {
+    "name": "Dickinson-Berge",
+    "description": "velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget eros elementum pellentesque quisque porta volutpat erat quisque erat",
+    "type": "channel",
+    "image_url": "http://dummyimage.com/437x324.png/cc0000/ffffff",
+    "team_id": 2
+  },
+  {
+    "name": "Walsh, Runolfsson and Runolfsson",
+    "description": "bibendum imperdiet nullam orci pede venenatis non sodales sed tincidunt eu felis fusce posuere felis sed lacus morbi sem mauris",
+    "type": "dm",
+    "image_url": "http://dummyimage.com/833x919.png/5fa2dd/ffffff",
+    "team_id": 1
+  },
+  {
+    "name": "Goyette, Wehner and Padberg",
+    "description": "aenean sit amet justo morbi ut odio cras mi pede malesuada in imperdiet et commodo vulputate justo in blandit ultrices enim lorem ipsum dolor sit amet consectetuer adipiscing elit",
+    "type": "channel",
+    "image_url": "http://dummyimage.com/763x507.png/cc0000/ffffff",
+    "team_id": 3
+  },
+  {
+    "name": "Jast and Sons",
+    "description": "ultrices vel augue vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae donec pharetra magna vestibulum aliquet ultrices erat tortor sollicitudin mi sit amet lobortis sapien",
+    "type": "dm",
+    "image_url": "http://dummyimage.com/542x657.png/ff4444/ffffff",
+    "team_id": 2
+  },
+  {
+    "name": "Cruickshank, Ryan and Rolfson",
+    "description": "consequat nulla nisl nunc nisl duis bibendum felis sed interdum venenatis turpis enim blandit mi in porttitor pede justo eu massa donec dapibus",
+    "type": "dm",
+    "image_url": "http://dummyimage.com/413x395.png/ff4444/ffffff",
+    "team_id": 3
+  },
+  {
+    "name": "Cummerata-Breitenberg",
+    "description": "lorem ipsum dolor sit amet consectetuer adipiscing elit proin interdum mauris non ligula pellentesque",
+    "type": "dm",
+    "image_url": "http://dummyimage.com/593x856.png/5fa2dd/ffffff",
+    "team_id": 2
+  },
+  {
+    "name": "Koch-Nienow",
+    "description": "justo etiam pretium iaculis justo in hac habitasse platea dictumst etiam faucibus cursus urna ut tellus nulla ut erat id mauris vulputate",
+    "type": "channel",
+    "image_url": "http://dummyimage.com/716x640.png/dddddd/000000",
+    "team_id": 2
+  },
+  {
+    "name": "Lesch-Gibson",
+    "description": "ultrices phasellus id sapien in sapien iaculis congue vivamus metus arcu adipiscing molestie hendrerit at vulputate vitae nisl aenean lectus pellentesque eget nunc donec quis orci eget orci vehicula",
+    "type": "channel",
+    "image_url": "http://dummyimage.com/846x311.png/cc0000/ffffff",
+    "team_id": 2
+  },
+  {
+    "name": "White LLC",
+    "description": "morbi a ipsum integer a nibh in quis justo maecenas rhoncus aliquam lacus morbi quis tortor",
+    "type": "channel",
+    "image_url": "http://dummyimage.com/297x536.png/cc0000/ffffff",
+    "team_id": 3
+  },
+  {
+    "name": "Hilpert-Kuphal",
+    "description": "nec dui luctus rutrum nulla tellus in sagittis dui vel nisl duis ac nibh",
+    "type": "channel",
+    "image_url": "http://dummyimage.com/265x837.png/ff4444/ffffff",
+    "team_id": 2
+  },
+  {
+    "name": "Stokes, Gutmann and Harber",
+    "description": "ultrices phasellus id sapien in sapien iaculis congue vivamus metus",
+    "type": "dm",
+    "image_url": "http://dummyimage.com/711x826.png/ff4444/ffffff",
+    "team_id": 1
+  },
+  {
+    "name": "Parker-Windler",
+    "description": "amet justo morbi ut odio cras mi pede malesuada in imperdiet et commodo vulputate justo in blandit ultrices enim lorem ipsum dolor",
+    "type": "dm",
+    "image_url": "http://dummyimage.com/843x394.png/5fa2dd/ffffff",
+    "team_id": 1
+  },
+  {
+    "name": "Goldner-Sanford",
+    "description": "in felis eu sapien cursus vestibulum proin eu mi nulla ac enim in tempor turpis nec euismod scelerisque quam turpis",
+    "type": "dm",
+    "image_url": "http://dummyimage.com/778x336.png/dddddd/000000",
+    "team_id": 2
+  },
+  {
+    "name": "Lind LLC",
+    "description": "erat id mauris vulputate elementum nullam varius nulla facilisi cras non velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget eros elementum pellentesque quisque",
+    "type": "channel",
+    "image_url": "http://dummyimage.com/521x452.png/dddddd/000000",
+    "team_id": 2
+  },
+  {
+    "name": "Dickinson-Doyle",
+    "description": "ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae mauris viverra diam",
+    "type": "dm",
+    "image_url": "http://dummyimage.com/810x893.png/cc0000/ffffff",
+    "team_id": 3
+  },
+  {
+    "name": "Muller-Toy",
+    "description": "purus sit amet nulla quisque arcu libero rutrum ac lobortis vel dapibus at diam",
+    "type": "dm",
+    "image_url": "http://dummyimage.com/746x699.png/dddddd/000000",
+    "team_id": 3
+  },
+  {
+    "name": "Heller-Beer",
+    "description": "elementum ligula vehicula consequat morbi a ipsum integer a nibh in quis justo maecenas rhoncus aliquam",
+    "type": "channel",
+    "image_url": "http://dummyimage.com/460x431.png/dddddd/000000",
+    "team_id": 2
+  },
+  {
+    "name": "Strosin and Sons",
+    "description": "amet erat nulla tempus vivamus in felis eu sapien cursus vestibulum proin eu mi nulla ac enim in",
+    "type": "dm",
+    "image_url": "http://dummyimage.com/708x913.png/5fa2dd/ffffff",
+    "team_id": 1
+  },
+  {
+    "name": "Koss Inc",
+    "description": "vulputate luctus cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus vivamus vestibulum sagittis sapien cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus",
+    "type": "channel",
+    "image_url": "http://dummyimage.com/931x348.png/dddddd/000000",
+    "team_id": 3
+  },
+  {
+    "name": "Hauck, Langworth and Bayer",
+    "description": "eleifend donec ut dolor morbi vel lectus in quam fringilla rhoncus mauris enim leo rhoncus sed vestibulum sit amet cursus id turpis integer aliquet",
+    "type": "channel",
+    "image_url": "http://dummyimage.com/958x351.png/5fa2dd/ffffff",
+    "team_id": 1
+  },
+  {
+    "name": "Waters-Green",
+    "description": "justo etiam pretium iaculis justo in hac habitasse platea dictumst etiam faucibus cursus urna ut tellus nulla",
+    "type": "channel",
+    "image_url": "http://dummyimage.com/464x913.png/dddddd/000000",
+    "team_id": 1
+  },
+  {
+    "name": "Christiansen Group",
+    "description": "lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum primis",
+    "type": "dm",
+    "image_url": "http://dummyimage.com/287x758.png/cc0000/ffffff",
+    "team_id": 1
+  },
+  {
+    "name": "Carter-Greenholt",
+    "description": "rutrum rutrum neque aenean auctor gravida sem praesent id massa id nisl venenatis lacinia aenean sit amet justo morbi ut odio cras mi pede malesuada in imperdiet et commodo",
+    "type": "dm",
+    "image_url": "http://dummyimage.com/340x540.png/dddddd/000000",
+    "team_id": 2
+  },
+  {
+    "name": "Wilderman, Klein and Sauer",
+    "description": "mus etiam vel augue vestibulum rutrum rutrum neque aenean auctor gravida sem praesent id massa id",
+    "type": "channel",
+    "image_url": "http://dummyimage.com/270x401.png/dddddd/000000",
+    "team_id": 2
+  },
+  {
+    "name": "Kautzer, Wilkinson and Goldner",
+    "description": "porttitor id consequat in consequat ut nulla sed accumsan felis ut at dolor quis odio consequat varius integer ac leo pellentesque ultrices mattis odio donec vitae nisi",
+    "type": "dm",
+    "image_url": "http://dummyimage.com/898x458.png/cc0000/ffffff",
+    "team_id": 1
+  }
+]

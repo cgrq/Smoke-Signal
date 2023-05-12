@@ -1,0 +1,30 @@
+.delete-channel-modal-h1{
+    margin-bottom:30px;
+    background-color: white;
+    color:rgb(40, 40, 40);
+    padding:3px 15px;
+    border-radius: 8px;
+}
+.delete-channel-modal-delete-button{
+    color:rgb(255, 255, 255);
+    background-color: rgb(255, 0, 0);
+    border:2px solid transparent;
+    border-radius: 16px;
+    font-weight: 600;
+    width:140px;
+    font-family: "Roboto Mono", roboto, Arial;
+    padding:4px 5px;
+    cursor: pointer;
+}
+.delete-channel-modal-button{
+    margin-top: 10px;
+    color:rgb(105, 105, 105);
+    background-color: rgb(255, 255, 255);
+    border:2px solid transparent;
+    border-radius: 16px;
+    font-weight: 600;
+    width:140px;
+    font-family: "Roboto Mono", roboto, Arial;
+    padding:4px 5px;
+    cursor: pointer;
+}

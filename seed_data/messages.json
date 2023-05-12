@@ -1,0 +1,27 @@
+[
+    {
+        "message": "pede ullamcorper augue a suscipit nulla elit ac nulla sed vel enim sit amet nunc viverra dapibus nulla suscipit ligula in lacus curabitur at ipsum ac tellus semper interdum mauris ullamcorper purus sit amet nulla quisque arcu libero rutrum ac lobortis vel dapibus at diam nam tristique tortor eu",
+        "user_id": 5,
+        "channel_id": 2
+    },
+    {
+        "message": "sed justo pellentesque viverra pede ac diam cras pellentesque volutpat dui maecenas tristique est et tempus semper est quam pharetra magna ac consequat metus sapien ut nunc vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae mauris viverra diam vitae",
+        "user_id": 19,
+        "channel_id": 1
+    },
+    {
+        "message": "suspendisse potenti nullam porttitor lacus at turpis donec",
+        "user_id": 20,
+        "channel_id": 3
+    },
+    {
+        "message": "dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae duis faucibus accumsan odio curabitur convallis duis consequat dui nec",
+        "user_id": 13,
+        "channel_id": 5
+    },
+    {
+        "message": "sem praesent id massa id nisl venenatis lacinia aenean sit amet justo morbi ut odio cras",
+        "user_id": 8,
+        "channel_id": 7
+    }
+]

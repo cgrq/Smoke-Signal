@@ -1,0 +1,27 @@
+.chat-interface-message-form{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chat-interface-message-form textarea{
+    background-color: rgb(94, 94, 94);
+    color:white;
+    padding:10px;
+    width:400px;
+    border-radius: 10px;
+    resize: none;
+    margin-right:10px;
+}
+.chat-interface-message-form button{
+    color:rgb(215, 215, 215);
+    padding:5px;
+    border-radius:10px;
+    background-color: rgb(105, 105, 105);
+}
+.chat-interface-message-inputs-wrapper{
+    display:flex;
+    margin-top:15px;
+    justify-content: center;
+    padding:10px;
+}

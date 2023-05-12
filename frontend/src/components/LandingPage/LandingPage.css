@@ -1,0 +1,7 @@
+.landing-page-main-wrapper{
+    display:flex;
+    flex-flow:column nowrap;
+    width:1024px;
+    margin:0 auto;
+    justify-content: center;
+}

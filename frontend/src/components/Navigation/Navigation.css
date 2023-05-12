@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+
+.profile-dropdown {
+  position: absolute;
+    border-radius: 30px;
+    border-top-right-radius:0;
+    flex-flow: column;
+    overflow: hidden;
+    z-index:5000;
+    margin-top:-10px;
+    top:90px;
+    right:215px;
+    background-color:rgb(103, 103, 103);
+}
+.profile-dropdown li, .profile-dropdown a{
+  color:black !important;
+
+}
+
+.hidden{
+  display: none
+}
+.show-profile-list{
+  display:flex;
+}
+.profile-icon{
+  font-size: 25px;
+  z-index:20000;
+
+}
+
+.right-nav-container{
+  display:flex;
+  align-items: center;
+}
+
+
+.profile-container{
+  position:relative;
+  display:flex;
+  margin-left:20px;
+  justify-content: flex-end;
+}
+
+.profile-icon-button{
+  background:none;
+  border:none;
+}
+
+.profile-list{
+  position:absolute;
+  border-radius: 30px;
+  border-top-right-radius:0;
+  flex-flow: column;
+  overflow: hidden;
+  z-index:5000;
+  top:40px;
+  right:12px;
+  background-color:rgb(74, 74, 74);
+}
+.nav-upper-container, .nav-lower-container{
+  padding:0 40px;
+  width:180px;
+}
+.nav-upper-container{
+  padding-top:20px;
+  color:black;
+  display:flex;
+  justify-content: space-between;
+}
+.nav-user-name-wrapper{
+  display: flex;
+  flex-flow: column;
+}
+.nav-lower-container{
+  padding-top:20px;
+  padding-bottom:20px;
+  display:flex;
+  flex-flow: column;
+  text-align: center;
+}
+.nav-lower-container-logged-out{
+  padding-top: 40px;
+}
+
+.nav-user-email{
+  font-size: 13px;
+}
+.nav-user-img{
+  width:40px;
+  height:40px;
+  object-fit: contain;
+  border-radius: 100%;
+}
+
+.profile-list button{
+  margin-top: 20px;
+  color:rgb(105, 105, 105);
+  background-color: rgb(255, 255, 255);
+  border:2px solid transparent;
+  border-radius: 16px;
+  margin-left:10px;
+  font-weight: 600;
+  margin:0 auto;
+  width:100px;
+  font-family: "Roboto Mono", roboto, Arial;
+  padding:4px 5px;
+  cursor: pointer;
+}
+
+.profile-list button:hover{
+  box-shadow: 0 0 7px rgb(255, 255, 255);
+}
+
+@media screen and (max-width: 767px) {
+  .nav-list{
+      padding:20px 20px;
+  }
+  .gather-logo{
+      width:130px;
+      padding:0;
+  }
+  .nav-list i{
+      font-size: 35px;
+  }
+}

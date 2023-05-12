@@ -1,0 +1,96 @@
+@import url("./MessageFeed.css");
+@import url("./MessageInputs.css");
+@import url("./SearchNav.css");
+
+/* Main */
+
+.chat-interface-main-wrapper{
+    display:flex;
+    flex-flow:row nowrap;
+    padding:30px;
+    width:1400px;
+    margin:40px auto;
+    background-color: rgb(42, 42, 42);
+    justify-content: flex-start;
+    border-radius: 20px !important;
+    overflow: hidden !important;
+}
+.chat-interface-main-wrapper ul li{
+    list-style: none;
+}
+.chat-interface-main-column{
+    background-color: rgb(42, 42, 42);
+    display:flex;
+    flex-flow:column nowrap;
+}
+
+
+/* Left Column */
+
+
+.chat-interface-main-left-column{
+    width:360px;
+    padding-right:30px
+}
+.chat-interface-smoke-signal-wrapper{
+    background-color:black;
+    border-radius:40px;
+    height:280px;
+}
+.chat-interface-team-management-wrapper{
+    display:flex;
+    flex-flow:column;
+    align-items: center;
+}
+
+.chat-iterface-section-divider{
+    margin: 10px 0 !important;
+    padding:0 !important;
+    border-color:rgb(64, 64, 64);
+    width:100px;
+}
+.chat-interface-team-management-wrapper h2{
+    padding:5px;
+    font-weight: 600;
+    margin-bottom:5px;
+    font-family:"Maven Pro";
+    font-size: 16px !important;
+    color:rgb(135, 135, 135) !important;
+}
+.chat-interface-create-buttons-wrapper{
+    margin-top:10px;
+    width:270px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* Right Column */
+.chat-interface-main-right-column{
+    width:1200px;
+}
+
+.chat-interface-message-feed-wrapper{
+    margin-top:10px;
+    display:flex;
+    width:100%;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: hidden;
+    height:700px;
+}
+.chat-interface-select-channel-wrapper{
+    margin-top:10px;
+    display:flex;
+    width:100%;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height:800px;
+}
+.chat-interface-message-feed-wrapper h1{
+    color:whitesmoke !important;
+    align-self: center;
+}
