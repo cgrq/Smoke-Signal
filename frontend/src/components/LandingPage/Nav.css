@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
 .landing-page-nav-wrapper{
     display:flex;
     flex-flow:row nowrap;
@@ -10,7 +12,6 @@
     margin-top: 50px;
 }
 
-
 .landing-page-logo-wrapper{
     position: relative;
     width:20px;
@@ -21,4 +22,43 @@
     width: 160px;
     left:-70px;
     top:-106px;
+}
+
+.splash-page-body {
+    /* border: 2px solid yellow; */
+    width: 800px;
+    margin: 30px 0 0 80px;
+}
+
+.splash-page-p {
+    font-family: "Roboto Mono", roboto, Arial;
+    margin-top: 10px;
+}
+
+.verbs {
+    font-style: italic;
+    border-bottom: 1px solid white;
+}
+
+.yeet {
+    height: 600px;
+    /* border: 2px dotted red; */
+}
+
+.footer {
+    background-color: yellow;
+    height: 20px;
+
+    display:flex;
+    width:800px;
+    padding:10px 30px;
+    border-radius: 40px;
+    justify-content: space-between;
+    background-color: rgb(63, 63, 63);
+    margin:0 auto;
+    /* margin-top: 50px; */
+}
+
+.founder:hover {
+    cursor: pointer;
 }
