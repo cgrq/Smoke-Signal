@@ -15,17 +15,27 @@ function UserFormModal({ componentType }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
-  const [errors, setErrors] = useState([]);
+  const [errors, setErrors] = useState({});
   const { closeModal } = useModal();
+
+  const imageNotValid = (url) => {
+    const errors = {};
+
+    const isValidUrl = url.match(/.(jpg|jpeg|png)$/);
+    if (!isValidUrl)
+      errors.image = "image url must end in .jpg, .jpeg, or .png";
+
+    const isTooLong = url.length > 500;
+    if (isTooLong)
+      errors.imageUrlLength = "image url must be less than 500 characters";
+
+    return Object.values(errors).length > 0 ? errors : false;
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (password === confirmPassword) {
-      console.log(
-        `🖥 ~ file: index.js:27 ~ handleSubmit ~ componentType:`,
-        componentType
-      );
 
+    if (password === confirmPassword && !imageNotValid(profileImageUrl)) {
       const data =
         componentType === "update"
           ? await dispatch(
@@ -54,9 +64,16 @@ function UserFormModal({ componentType }) {
         closeModal();
       }
     } else {
-      setErrors([
-        "Confirm Password field must be the same as the Password field",
-      ]);
+      if (password !== confirmPassword) {
+        setErrors({
+          ...errors,
+          password:
+            "Confirm Password field must be the same as the Password field",
+        });
+      }
+      if (imageNotValid(profileImageUrl)) {
+        setErrors({ ...errors, ...imageNotValid(profileImageUrl) });
+      }
     }
   };
 
@@ -76,7 +93,7 @@ function UserFormModal({ componentType }) {
         {componentType === "update" ? "Edit user" : "Sign up"}
       </h1>
       <form className="sign-up-modal-form" onSubmit={handleSubmit}>
-        {Object.values(errors).length > 0 && <ErrorHandler errors={errors} />}
+        <ErrorHandler errors={errors} />
         <div>
           <label>First Name</label>
           <input

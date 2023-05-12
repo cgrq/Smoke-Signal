@@ -208,5 +208,12 @@
     "type": "dm",
     "image_url": "http://dummyimage.com/898x458.png/cc0000/ffffff",
     "team_id": 1
+  },
+  {
+    "name": "General Test Channel",
+    "description": "porttitor id consequat in consequat ut nulla sed accumsan felis ut at dolor quis odio consequat varius integer ac leo pellentesque ultrices mattis odio donec vitae nisi",
+    "type": "channel",
+    "image_url": "../test_image.png",
+    "team_id": 4
   }
 ]
