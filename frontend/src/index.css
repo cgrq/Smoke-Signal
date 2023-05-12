@@ -32,12 +32,27 @@ h1 {
 #modal-content {
     position: absolute;
     border-radius: 20px;
-    padding:30px;
+    padding: 30px;
     background-color: rgb(40, 40, 40);
     color: white !important;
     width: 400px;
-    display:flex;
-    flex-flow:column;
+    display: flex;
+    flex-flow: column;
     justify-content: center;
     align-items: center;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    /* background: linear-gradient(to bottom, #373737, #5b5b5b, #373737); */
+    background-color: rgb(9, 9, 9);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    /* background: linear-gradient(to bottom, #555, #202020); */
 }
