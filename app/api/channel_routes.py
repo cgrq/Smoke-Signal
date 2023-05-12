@@ -82,9 +82,6 @@ def create_channel():
     db.session.add(new_channel)
     db.session.commit()
 
-    # print("CHANNEL ID")
-    # print(new_channel.id)
-
     membership = ChannelMembership(
         user_id=current_user.id,
         channel_id=new_channel.id,
@@ -114,11 +111,8 @@ def get_channel(channel_id):
     """
     GET channel by ID
     """
-    # print("HIT ROUTE ~~~")
 
     channel = Channel.query.get(channel_id)
-    # print("CHANNEL ~~~~~~~~")
-    # print(channel.to_dict())
 
     return {'channel': channel.to_dict()}
 
@@ -129,7 +123,6 @@ def edit_channel(channel_id):
     """
     PUT edit a channel
     """
-    # print("HIT ROUTE ~~~")
     form = ChannelForm()
     form['csrf_token'].data = request.cookies['csrf_token']
 
@@ -137,8 +130,6 @@ def edit_channel(channel_id):
         return validation_errors_to_error_messages(form.errors)
 
     channel = Channel.query.get(channel_id)
-    # print("CHANNEL ~~~~~~~~")
-    # print(channel.to_dict())
 
     if form.validate_on_submit():
         data = form.data

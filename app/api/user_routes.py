@@ -3,7 +3,6 @@ from flask_login import login_required
 from app.models import User, Team, TeamMembership
 
 user_routes = Blueprint('users', __name__)
-print()
 
 
 @user_routes.route('/')

@@ -13,7 +13,6 @@ function ProfileButton({ user }) {
   const demoUserIds = [1, 3];
 
   const openMenu = () => {
-    // console.log("profile button push -----------> ", showMenu)
     if (showMenu) return;
     setShowMenu(true);
   };
