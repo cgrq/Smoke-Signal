@@ -18,7 +18,7 @@ function UserFormModal({ componentType }) {
   const [errors, setErrors] = useState({});
   const { closeModal } = useModal();
 
-  const notValid = (
+  const isValid = (
     firstName,
     lastName,
     profileImageUrl,
@@ -28,31 +28,44 @@ function UserFormModal({ componentType }) {
   ) => {
     const errors = {};
 
-    if (!profileImageUrl.match(/.(jpg|jpeg|png)$/))
+    if (profileImageUrl && !profileImageUrl.match(/.(jpg|jpeg|png)$/))
       errors.image = "image url must end in .jpg, .jpeg, or .png";
+
     if (profileImageUrl && profileImageUrl.length > 500)
       errors.imageUrlLength = "image url must be less than 500 characters";
+
     if (firstName.length > 40)
       errors.firstName = "first name must be less than 40 characters";
+
     if (lastName.length > 40)
       errors.firstName = "last name must be less than 40 characters";
+
     if (username.length > 40)
       errors.firstName = "username must be less than 40 characters";
-    if (email.length > 50) errors.email = "email must be less than 50 characters";
+
+    if (email.length > 50)
+      errors.email = "email must be less than 50 characters";
+
     if (password.length > 40)
       errors.passwordLength = "password must be less than 40 characters";
 
-    return Object.values(errors).length > 0 ? errors : false;
+    return Object.values(errors).length > 0 ? errors : true;
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setErrors({});
 
-    if (
-      password === confirmPassword &&
-      !notValid(firstName, lastName, profileImageUrl, email, username, password)
-    ) {
+    const valid = isValid(
+      firstName,
+      lastName,
+      profileImageUrl,
+      email,
+      username,
+      password
+    );
+
+    if (password === confirmPassword && valid === true) {
       const data =
         componentType === "update"
           ? await dispatch(
@@ -83,23 +96,13 @@ function UserFormModal({ componentType }) {
     } else {
       if (password !== confirmPassword) {
         setErrors({
-          ...errors,
           password:
             "Confirm Password field must be the same as the Password field",
         });
       }
 
-      const validationErrors = notValid(
-        firstName,
-        lastName,
-        profileImageUrl,
-        email,
-        username,
-        password
-      );
-
-      if (validationErrors !== false) {
-        setErrors({ ...errors, ...validationErrors });
+      if (valid !== true) {
+        setErrors({  ...valid });
       }
     }
   };
