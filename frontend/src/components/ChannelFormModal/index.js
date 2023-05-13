@@ -48,10 +48,13 @@ function ChannelFormModal({ id, componentType, title }) {
     const { name, description, imageUrl } = channel;
 
     if (name.length > 50) errors.name = "name must be less than 50 characters";
+
     if (description.length > 255)
       errors.description = "description must be less than 255 characters";
+
     if (imageUrl.length > 500)
       errors.imageUrlLength = "image url must be less than 500 characters";
+
     if (imageUrl && !imageUrl.match(/.(jpg|jpeg|png)$/))
       errors.validImgUrl = "image url must end in .jpg, .jpeg, or .png";
 
