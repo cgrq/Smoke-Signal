@@ -1,4 +1,4 @@
-# Welcome to Smoke Signal!
+# ![icon](assets/favicon.png) Welcome to Smoke Signal!
 
 [Smoke Signal](https://www.smokesignal.chat/) is a soft Slack clone that allows users to communicate with each other via text in real time.
 
