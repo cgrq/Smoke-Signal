@@ -67,6 +67,9 @@
 Feel free to get in touch with us on LinkedIn!
 
 [Adam Tull](https://www.linkedin.com/in/adam-tull-a54207a6/)
+
 [Christian Rosá](https://www.linkedin.com/in/c--r/)
+
 [Roosevelt Burden](https://www.linkedin.com/in/roosevelt-burden-83982026b/)
+
 [Vincent Radford](https://www.linkedin.com/in/vincent-radford-1a9599173/)
