@@ -5,6 +5,7 @@ import { authenticate } from "./store/session";
 import { getAllTeamsThunk } from "./store/teams";
 import LandingPage from "./components/LandingPage";
 import ChatInterface from "./components/ChatInterface";
+import Error404 from "./components/Error404";
 
 function App() {
   const dispatch = useDispatch();
@@ -35,6 +36,10 @@ function App() {
                 <LandingPage />
               )
             }
+          </Route>
+
+          <Route>
+            <Error404 />
           </Route>
         </Switch>
       )}
