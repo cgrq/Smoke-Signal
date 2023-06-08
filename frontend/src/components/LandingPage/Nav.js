@@ -1,12 +1,12 @@
-import "./Nav.css"
+import "./Nav.css";
 import React, { useState, useEffect, useRef } from "react";
 import { useDispatch } from "react-redux";
-import lottie from 'lottie-web';
+import lottie from "lottie-web";
 import { logout } from "../../store/session";
 import OpenLandingPageModalButton from "../OpenLandingPageModalButton";
 import LoginFormModal from "../LoginFormModal";
 import UserFormModal from "../UserFormModal";
-import animationData from "./smoke-signal.json"
+import animationData from "./smoke-signal.json";
 import SmokeSignalSplash from "../SmokeSignalSplash";
 
 function Nav() {
@@ -36,7 +36,7 @@ function Nav() {
     if (animationContainer.current && !animationInstance) {
       const newAnimationInstance = lottie.loadAnimation({
         container: animationContainer.current,
-        renderer: 'svg',
+        renderer: "svg",
         loop: true,
         autoplay: true,
         animationData: animationData,
@@ -44,6 +44,13 @@ function Nav() {
       setAnimationInstance(newAnimationInstance);
     }
   }, [animationContainer, animationInstance]);
+
+  const aStyle = {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    textDecoration: "none",
+  };
 
   return (
     <>
@@ -67,19 +74,71 @@ function Nav() {
       </div>
       <div className="splash-page-body">
         <h1>Welcome to Smoke Signal!</h1>
-        <p className="splash-page-p">A site to <span className="verbs">engage</span>, <span className="verbs">interact</span>, and <span className="verbs">communicate</span> with others in a collaborative way.</p>
+        <p className="splash-page-p">
+          A site to <span className="verbs">engage</span>,{" "}
+          <span className="verbs">interact</span>, and{" "}
+          <span className="verbs">communicate</span> with others in a
+          collaborative way.
+        </p>
       </div>
       <div className="yeet">
-          <SmokeSignalSplash />
-        </div>
+        <SmokeSignalSplash />
+      </div>
       <div className="footer">
-        <p>Vincent Radford</p>
-        <p>Roosevelt Burden</p>
-        <p>Christian Rosa</p>
-        <p>Adam Tull</p>
+        <a
+          href="https://www.linkedin.com/in/vincent-radford-1a9599173/"
+          target="_blank"
+          rel="noreferrer"
+          style={{
+            ...aStyle,
+          }}
+        >
+          <i style={{ marginRight: "5px" }} className="fa-brands fa-linkedin" />
+          Vincent Radford
+        </a>
+        <a
+          href="https://www.linkedin.com/in/roosevelt-burden-83982026b/"
+          target="_blank"
+          rel="noreferrer"
+          style={{
+            ...aStyle,
+          }}
+        >
+          <i style={{ marginRight: "5px" }} className="fa-brands fa-linkedin" />
+          Roosevelt Burden
+        </a>
+        <a
+          href="https://www.linkedin.com/in/c--r/"
+          target="_blank"
+          rel="noreferrer"
+          style={{
+            ...aStyle,
+          }}
+        >
+          <i style={{ marginRight: "5px" }} className="fa-brands fa-linkedin" />
+          Christian Rosa
+        </a>
+        <a
+          href="https://www.linkedin.com/in/adam-tull-a54207a6/"
+          target="_blank"
+          rel="noreferrer"
+          style={{
+            ...aStyle,
+          }}
+        >
+          <i style={{ marginRight: "5px" }} className="fa-brands fa-linkedin" />
+          Adam Tull
+        </a>
+        <a
+          target="_blank"
+          rel="noreferrer"
+          href="https://github.com/cgrq/Smoke-Signal"
+        >
+          <i className="fa-brands fa-github" />
+        </a>
         <p>@2023</p>
       </div>
     </>
-  )
+  );
 }
-export default Nav
+export default Nav;
