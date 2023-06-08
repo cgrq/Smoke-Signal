@@ -8,6 +8,7 @@ if os.environ.get("FLASK_ENV") == "production":
     origins = [
         "https://smoke-signal-new.onrender.com",
         "https://smoke-signal-new.onrender.com",
+        "https://smokesignal.chat",
     ]
 else:
     origins = "*"
