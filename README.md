@@ -6,7 +6,7 @@
 
 ## Wiki Links
 
-[API](https://github.com/cgrq/Smoke-Signal/wiki/API) | [Features List](https://github.com/cgrq/Smoke-Signal/wiki/Features-List) | [User Stories](https://github.com/cgrq/Smoke-Signal/wiki/User-Stories)
+[API](https://github.com/cgrq/Smoke-Signal/wiki/API) | [Features List](https://github.com/cgrq/Smoke-Signal/wiki/Features-List) | [User Stories](https://github.com/cgrq/Smoke-Signal/wiki/User-Stories) | [Redux Store Shape](https://github.com/cgrq/Smoke-Signal/wiki/Redux-Store-Shape)
 
 ---
 
@@ -28,11 +28,18 @@
 
 ---
 
-## Photos
+## UI
+### Homepage
 
-### Channel Screen
+![Homepage](assets/smokescreen-ui.png)
+
+### Channel Page
 
 ![Channel Screen](assets/channel_screen.png)
+
+### Create a Channel Form
+
+![Channel Screen](assets/create-a-channel-ui.png)
 
 ---
 
