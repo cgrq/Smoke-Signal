@@ -7,7 +7,7 @@ from flask_socketio import SocketIO, join_room
 if os.environ.get("FLASK_ENV") == "production":
     origins = [
         "https://smoke-signal-new.onrender.com",
-        "https://www.smokesignal.chat/",
+        "https://www.smokesignal.chat",
         "https://smock-signal.onrender.com",
     ]
 else:
