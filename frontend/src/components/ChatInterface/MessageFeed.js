@@ -35,7 +35,7 @@ function MessageFeed({ channelId }) {
   return (
     <div className="chat-interface-message-feed">
       <ul className="chat-interface-message-wrapper">
-        {Object.values(messages).map((message) => (
+        {Object.values(messages).map((message, idx) => (
           <div key={message.id}>
             <Message
               body={message.message}
@@ -43,6 +43,7 @@ function MessageFeed({ channelId }) {
               timestamp={message.sent_at}
               user={user}
               message={message}
+              index={idx}
             />
           </div>
         ))}
