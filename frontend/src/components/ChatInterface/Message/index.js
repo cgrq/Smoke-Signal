@@ -13,20 +13,26 @@ export default function Message({ body, username, timestamp, user, message }) {
     const day = date.getDate();
     const year = date.getFullYear();
 
-    const formattedHour = ((hour % 12) || 12).toString();
-    const formattedMinute = minute.toString().padStart(2, '0');
-    const amPm = hour < 12 ? 'am' : 'pm';
+    const formattedHour = (hour % 12 || 12).toString();
+    const formattedMinute = minute.toString().padStart(2, "0");
+    const amPm = hour < 12 ? "am" : "pm";
 
     return `${month}/${day}/${year} - ${formattedHour}:${formattedMinute} ${amPm}`;
   }
-
 
   return (
     <li className="chat-interface-message">
       <div className="chat-interface-message-body">{body}</div>
       <div className="chat-interface-message-details">
-        <div className="chat-interface-message-sender">{username}</div>
-        <div className="chat-interface-message-timestamp">{formatDateString(timestamp)}</div>
+        <div
+          className="chat-interface-message-sender"
+          style={{ marginRight: "6px", fontWeight: "bold" }}
+        >
+          {username}
+        </div>
+        <div className="chat-interface-message-timestamp">
+          {formatDateString(timestamp)}
+        </div>
         {uid === muid && (
           <div className="chat-interface-message-button-wrapper">
             <OpenEditMessageModalButton

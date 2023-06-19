@@ -4,6 +4,8 @@
     height:600px;
     border-radius: 20px;
     overflow-y: auto;
+    display: flex;
+    flex-direction: column-reverse;
 }
 .chat-interface-message{
     padding:30px;
@@ -34,4 +36,3 @@
     justify-content: flex-start;
     align-items: center;
 }
-
