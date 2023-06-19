@@ -27,10 +27,10 @@ export default function FeedItem({ channelId, imageSrc, name }) {
   return (
     <>
       <div onClick={onChannelClick} className="feed-item-wrapper clickable">
-      <div className="feed-item-name-wrapper">
-        <img src={imageSrc} />
-        <p>{name}</p>
-      </div>
+        <div className="feed-item-name-wrapper">
+          <img src={imageSrc} />
+          <p>{name}</p>
+        </div>
         <div>
           <OpenChannelUpdateModalButton
             buttonText="Edit"
