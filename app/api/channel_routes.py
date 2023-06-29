@@ -32,18 +32,18 @@ def user_channels():
     """
     GET user channels
     """
-    user_id = current_user.id
+    # user_id = current_user.id
 
-    user_channel_memberships = ChannelMembership.query.where(
-        ChannelMembership.user_id == user_id)
+    # user_channel_memberships = ChannelMembership.query.where(
+    #     ChannelMembership.user_id == user_id)
 
-    channel_ids = [
-        membership.channel_id for membership in user_channel_memberships]
+    # channel_ids = [
+    #     membership.channel_id for membership in user_channel_memberships]
 
-    channels = [channel for channel in Channel.query.all()
-                if channel.id in channel_ids]
+    # channels = [channel for channel in Channel.query.all()
+    #             if channel.id in channel_ids]
 
-    return {'channels': [channel.to_dict() for channel in channels]}
+    return {'channels': [channel.to_dict()['channels'].to_dict() for channel in current_user.channels]}
 
 
 @channel_routes.route('/team/<int:team_id>')
