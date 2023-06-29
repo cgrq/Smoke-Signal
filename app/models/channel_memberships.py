@@ -23,3 +23,6 @@ class ChannelMembership(db.Model):
 
     channels = db.relationship("Channel", back_populates="users")
     users = db.relationship("User", back_populates="channels")
+
+    def to_dict(self):
+        return {"channels": self.channels, "users": self.users}

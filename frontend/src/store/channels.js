@@ -1,3 +1,5 @@
+import { normalize } from "./utils";
+
 // Action type constants
 const GET_ALL_CHANNELS = "channels/GET_ALL_CHANNELS";
 const GET_USER_CHANNELS = "channels/GET_USER_CHANNELS";
@@ -157,8 +159,8 @@ export const deleteChannelThunk = (channelId) => async (dispatch) => {
   });
 
   if (response.ok) {
-    const deleteSuccessMessage = await response.json();
-    dispatch(deleteChannel(channelId));
+    await response.json();
+    await dispatch(deleteChannel(channelId));
 
     return null;
   }
@@ -178,62 +180,50 @@ const initialState = {
 const channelsReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_CURRENT_CHANNEL: {
-      const newState = { ...state };
-      newState.currentChannel = action.payload.channel;
+      const newState = normalize(state);
+      newState.currentChannel = normalize(action.payload.channel);
 
       return newState;
     }
     case GET_ALL_CHANNELS: {
-      const newState = { ...state, allChannels: { ...state.allChannels } };
+      const newState = normalize(state);
 
-      // Normalize data
-      const channels = {};
-      action.payload.forEach((channel) => (channels[channel.id] = channel));
-
-      newState.allChannels = { ...channels };
+      newState.allChannels = normalize(action.payload);
       return newState;
     }
     case GET_USER_CHANNELS: {
-      const newState = { ...state, userChannels: { ...state.userChannels } };
+      const newState = normalize(state);
 
-      // Normalize data
-      const channels = {};
-      action.payload.forEach((channel) => (channels[channel.id] = channel));
-
-      newState.userChannels = { ...channels };
+      newState.userChannels = normalize(action.payload);
       return newState;
     }
     case GET_TEAM_CHANNELS: {
-      const newState = { ...state, teamChannels: { ...state.teamChannels } };
+      const newState = normalize(state);
 
-      // Normalize data
-      const channels = {};
-      action.payload.forEach((channel) => (channels[channel.id] = channel));
-
-      newState.teamChannels = { ...channels };
+      newState.teamChannels = normalize(action.payload);
       return newState;
     }
     case CREATE_CHANNEL: {
-      const newState = { ...state };
+      const newState = normalize(state);
 
-      newState.allChannels[action.payload.id] = action.payload;
-      newState.userChannels[action.payload.id] = action.payload;
-      newState.teamChannels[action.payload.id] = action.payload;
-      newState.currentChannel = action.payload;
+      newState.allChannels[action.payload.id] = normalize(action.payload);
+      newState.userChannels[action.payload.id] = normalize(action.payload);
+      newState.teamChannels[action.payload.id] = normalize(action.payload);
+      newState.currentChannel = normalize(action.payload);
 
       return newState;
     }
     case EDIT_CHANNEL: {
-      const newState = { ...state };
+      const newState = normalize(state);
 
-      newState.allChannels[action.payload.id] = action.payload;
-      newState.userChannels[action.payload.id] = action.payload;
-      newState.teamChannels[action.payload.id] = action.payload;
+      newState.allChannels[action.payload.id] = normalize(action.payload);
+      newState.userChannels[action.payload.id] = normalize(action.payload);
+      newState.teamChannels[action.payload.id] = normalize(action.payload);
 
       return newState;
     }
     case DELETE_CHANNEL: {
-      const newState = { ...state };
+      const newState = normalize(state);
 
       delete newState.allChannels[action.payload];
       delete newState.userChannels[action.payload];
@@ -242,7 +232,7 @@ const channelsReducer = (state = initialState, action) => {
       return newState;
     }
     case RESET_CURRENT_CHANNEL: {
-      const newState = { ...state };
+      const newState = normalize(state);
       newState.currentChannel = null;
       return newState;
     }
